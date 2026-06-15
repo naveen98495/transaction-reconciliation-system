@@ -39,7 +39,7 @@ public class ReconciliationService {
             for (BankTransaction b : bankTransactions) {
 
                 if (t.getReferenceId().equals(b.getReferenceId())
-                        && t.getAmount().equals(b.getAmount())) {
+                        && t.getAmount() == b.getAmount()) {
 
                     ReconciliationResult result =
                             new ReconciliationResult();

@@ -3,7 +3,7 @@ package com.naveen.reconciliation_system.controller;
 import com.naveen.reconciliation_system.entity.TransactionRecord;
 import com.naveen.reconciliation_system.repository.TransactionRepository;
 import com.naveen.reconciliation_system.service.TransactionService;
-
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -24,7 +24,9 @@ public class TransactionController {
 
     // CREATE
     @PostMapping
-    public TransactionRecord createTransaction(@RequestBody TransactionRecord transaction) {
+    public TransactionRecord createTransaction(
+            @Valid @RequestBody TransactionRecord transaction) {
+
         return transactionService.saveTransaction(transaction);
     }
 
@@ -34,21 +36,17 @@ public class TransactionController {
         return transactionService.getAllTransactions();
     }
 
-    // PAGINATION
-    @GetMapping("/paged")
-    public Page<TransactionRecord> getPagedTransactions(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "5") int size) {
-
-        Pageable pageable = PageRequest.of(page, size);
-        return transactionRepository.findAll(pageable);
+    // GET BY ID
+    @GetMapping("/{id}")
+    public TransactionRecord getTransactionById(@PathVariable Long id) {
+        return transactionService.getTransactionById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
     public TransactionRecord updateTransaction(
             @PathVariable Long id,
-            @RequestBody TransactionRecord transaction) {
+            @Valid @RequestBody TransactionRecord transaction) {
 
         return transactionService.updateTransaction(id, transaction);
     }
@@ -58,6 +56,18 @@ public class TransactionController {
     public String deleteTransaction(@PathVariable Long id) {
 
         transactionService.deleteTransaction(id);
+
         return "Transaction deleted successfully";
+    }
+
+    // PAGINATION
+    @GetMapping("/paged")
+    public Page<TransactionRecord> getPagedTransactions(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size) {
+
+        Pageable pageable = PageRequest.of(page, size);
+
+        return transactionRepository.findAll(pageable);
     }
 }
