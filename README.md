@@ -1,6 +1,6 @@
-## 🚀 Enterprise Transaction Reconciliation Platform
+## 🚀 Transaction Reconciliation Platform
 
-A full-stack enterprise-grade transaction reconciliation platform designed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
+A full-stack transaction reconciliation platform designed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
 
 The system enables organizations to efficiently manage financial transactions, identify mismatches, analyze reconciliation results, and monitor transaction health through an interactive dashboard.
 
