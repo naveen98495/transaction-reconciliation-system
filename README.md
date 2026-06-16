@@ -1,4 +1,4 @@
-🚀 Enterprise Transaction Reconciliation Platform
+## 🚀 Enterprise Transaction Reconciliation Platform
 
 A full-stack enterprise-grade transaction reconciliation platform designed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
 
@@ -6,7 +6,7 @@ The system enables organizations to efficiently manage financial transactions, i
 
 ---
 
-📌 Project Highlights
+## 📌 Project Highlights
 
 ✔ Secure JWT Authentication & Authorization
 
@@ -28,7 +28,7 @@ The system enables organizations to efficiently manage financial transactions, i
 
 ---
 
-🎯 Business Problem
+## 🎯 Business Problem
 
 Organizations often receive transaction records from multiple sources. Manually validating and reconciling these records is time-consuming and prone to errors.
 
@@ -36,7 +36,7 @@ This platform automates the reconciliation process by validating uploaded transa
 
 ---
 
-🏗 System Architecture
+## 🏗 System Architecture
 
 React Frontend
        │
@@ -48,7 +48,7 @@ PostgreSQL Database
 
 ---
 
-✨ Features
+## ✨ Features
 
 Authentication Module
 
@@ -82,7 +82,7 @@ Dashboard & Analytics
 
 ---
 
-🛠 Technology Stack
+## 🛠 Technology Stack
 
 Backend
 
@@ -111,7 +111,7 @@ Development Tools
 
 ---
 
-📂 Repository Structure
+## 📂 Repository Structure
 
 transaction-reconciliation-system
 │
@@ -138,7 +138,7 @@ transaction-reconciliation-system
 
 ---
 
-📸 Application Screenshots
+## 📸 Application Screenshots
 
 Dashboard
 
@@ -162,7 +162,7 @@ Swagger Documentation
 
 ---
 
-🎥 Project Demonstration
+## 🎥 Project Demonstration
 
 Demo Video
 
@@ -170,7 +170,7 @@ Demo Video
 
 ---
 
-📑 API Documentation
+## 📑 API Documentation
 
 Swagger UI:
 
@@ -178,7 +178,7 @@ http://localhost:9091/swagger-ui/index.html
 
 ---
 
-🔐 Authentication APIs
+## 🔐 Authentication APIs
 
 Register User
 
@@ -190,7 +190,7 @@ POST /auth/login
 
 ---
 
-💳 Transaction APIs
+## 💳 Transaction APIs
 
 Upload Transactions
 
@@ -210,7 +210,7 @@ GET /transactions/reconciliation-summary
 
 ---
 
-🔒 Security Features
+## 🔒 Security Features
 
 - JWT Token Authentication
 - Role-Based Access Control (RBAC)
@@ -221,7 +221,7 @@ GET /transactions/reconciliation-summary
 
 ---
 
-⚙ Backend Setup
+## ⚙ Backend Setup
 
 cd backend
 mvn clean install
@@ -233,7 +233,7 @@ http://localhost:9091
 
 ---
 
-🎨 Frontend Setup
+## 🎨 Frontend Setup
 
 cd frontend
 npm install
@@ -245,7 +245,7 @@ http://localhost:3000
 
 ---
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 
 - Export Reports to Excel
 - Email Notifications
@@ -257,24 +257,24 @@ http://localhost:3000
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Naveen Amalakanti
 
-📧 Email
+## 📧 Email
 
 naveenamalakanti07@gmail.com
 
-🔗 LinkedIn
+## 🔗 LinkedIn
 
 https://www.linkedin.com/in/naveen-amalakanti
 
-💻 GitHub
+## 💻 GitHub
 
 https://github.com/naveen98495
 
 ---
 
-📄 License
+## 📄 License
 
 This project is developed for educational, portfolio, and demonstration purposes.
