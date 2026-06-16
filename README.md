@@ -113,6 +113,7 @@ Development Tools
 
 ## 📂 Repository Structure
 
+```text
 transaction-reconciliation-system
 │
 ├── backend
@@ -135,30 +136,31 @@ transaction-reconciliation-system
 ├── Dockerfile
 ├── pom.xml
 └── README.md
+```
 
 ---
 
 ## 📸 Application Screenshots
 
-Dashboard
+### Dashboard
 
-"Dashboard" (screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
-Transaction Search
+### Transaction Search
 
-"Transaction Search" (screenshots/Search%20transactions.png)
+![Transaction Search](screenshots/Search%20transactions.png)
 
-Transaction Records
+### Transaction Records
 
-"Transaction Records" (screenshots/transaction%20records.png)
+![Transaction Records](screenshots/transaction%20records.png)
 
-CSV Upload
+### CSV Upload
 
-"CSV Upload" (screenshots/Csv%20file%20upload_Edited.png)
+![CSV Upload](screenshots/Csv%20file%20upload_Edited.png)
 
-Swagger Documentation
+### Swagger Documentation
 
-"Swagger" (screenshots/swagger%20page.png)
+![Swagger Documentation](screenshots/swagger%20page.png)
 
 ---
 
