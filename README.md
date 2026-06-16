@@ -1,71 +1,107 @@
-# Enterprise Transaction Reconciliation Platform
+🚀 Enterprise Transaction Reconciliation Platform
 
-A full-stack enterprise-grade transaction reconciliation platform developed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
+A full-stack enterprise-grade transaction reconciliation platform designed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
 
-The platform provides secure authentication using JWT, CSV file upload functionality, transaction search capabilities, reconciliation summary dashboards, and REST API documentation through Swagger UI.
-
----
-
-## Live Demo
-Frontend:
-https://your-frontend-url.com
-
-Backend Swagger:
-https://your-backend-url/swagger-ui/index.html
+The system enables organizations to efficiently manage financial transactions, identify mismatches, analyze reconciliation results, and monitor transaction health through an interactive dashboard.
 
 ---
 
-## Demo Video
+📌 Project Highlights
 
-🎥 [Watch Project Demo Video](https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view?usp=drivesdk)
+✔ Secure JWT Authentication & Authorization
 
----
+✔ CSV Transaction Upload & Processing
 
-## Features
+✔ Automated Transaction Reconciliation
 
-### Backend Features
+✔ Advanced Transaction Search
 
-- Spring Boot REST APIs
-- JWT Authentication & Authorization
-- Role Based Access Control
-- CSV File Upload Processing
-- Transaction Reconciliation Engine
-- Search Transactions API
-- Exception Handling
-- Swagger Documentation
-- PostgreSQL Database Integration
+✔ Reconciliation Analytics Dashboard
 
-### Frontend Features
+✔ RESTful API Architecture
 
-- React Dashboard
-- Transaction Search
-- Reconciliation Summary
-- Transaction Records Table
-- Responsive User Interface
-- API Integration
+✔ Swagger API Documentation
+
+✔ PostgreSQL Database Integration
+
+✔ Responsive React Frontend
 
 ---
 
-## Technology Stack
+🎯 Business Problem
 
-### Backend
+Organizations often receive transaction records from multiple sources. Manually validating and reconciling these records is time-consuming and prone to errors.
+
+This platform automates the reconciliation process by validating uploaded transaction data, identifying mismatches, generating reconciliation summaries, and providing real-time visibility through an interactive dashboard.
+
+---
+
+🏗 System Architecture
+
+React Frontend
+       │
+       ▼
+Spring Boot REST APIs
+       │
+       ▼
+PostgreSQL Database
+
+---
+
+✨ Features
+
+Authentication Module
+
+- User Registration
+- User Login
+- JWT Token Generation
+- Protected APIs
+- Role-Based Access Control
+
+Transaction Management
+
+- Upload Transactions via CSV
+- View Transaction Records
+- Search Transactions
+- Update Transactions
+- Delete Transactions
+
+Reconciliation Engine
+
+- Automatic Transaction Matching
+- Reconciliation Summary Generation
+- Transaction Validation
+- Exception Identification
+
+Dashboard & Analytics
+
+- Reconciliation Overview
+- Transaction Statistics
+- Monitoring Dashboard
+- Search & Filtering
+
+---
+
+🛠 Technology Stack
+
+Backend
 
 - Java 17
 - Spring Boot
 - Spring Security
-- JWT
-- Maven
+- JWT Authentication
 - PostgreSQL
+- Maven
 - Swagger OpenAPI
 
-### Frontend
+Frontend
 
 - React JS
 - JavaScript
-- HTML
-- CSS
+- HTML5
+- CSS3
 
-### Tools
+Development Tools
 
 - IntelliJ IDEA
 - VS Code
@@ -75,221 +111,170 @@ https://your-backend-url/swagger-ui/index.html
 
 ---
 
-## Project Architecture
+📂 Repository Structure
 
-```text
 transaction-reconciliation-system
 │
 ├── backend
-│   ├── config
-│   │   ├── JwtFilter.java
-│   │   ├── JwtUtil.java
-│   │   └── SecurityConfig.java
-│   │
 │   ├── controller
-│   ├── dto
-│   ├── entity
-│   ├── enums
-│   ├── exception
-│   ├── repository
 │   ├── service
-│   │
-│   └── ReconciliationSystemApplication.java
+│   ├── repository
+│   ├── entity
+│   ├── dto
+│   ├── config
+│   └── security
 │
 ├── frontend
-│   ├── components
-│   │   ├── Navbar.js
-│   │   ├── ReconciliationSummary.js
-│   │   ├── SearchTransaction.js
-│   │   └── TransactionTable.js
-│   │
-│   ├── pages
-│   │   └── Dashboard.js
-│   │
-│   ├── App.js
-│   ├── App.css
-│   └── index.js
+│   ├── src
+│   ├── public
+│   └── components
 │
 ├── screenshots
 │
+├── docker-compose.yml
+├── Dockerfile
+├── pom.xml
 └── README.md
-```
 
 ---
 
-## Screenshots
+📸 Application Screenshots
 
-### Project Structure
+Dashboard
 
-![Project Structure](screenshots/project%20package.png)
+"Dashboard" (screenshots/dashboard.png)
 
----
+Transaction Search
 
-### Dashboard
+"Transaction Search" (screenshots/Search%20transactions.png)
 
-Transaction monitoring dashboard with reconciliation insights.
+Transaction Records
 
-![Dashboard](screenshots/dashboard.png)
+"Transaction Records" (screenshots/transaction%20records.png)
 
----
+CSV Upload
 
-### Search Transactions
+"CSV Upload" (screenshots/Csv%20file%20upload_Edited.png)
 
-Search and filter transaction records.
+Swagger Documentation
 
-![Search Transactions](screenshots/Search%20transactions.png)
-
----
-
-### Transaction Records
-
-View all uploaded transaction records.
-
-![Transaction Records](screenshots/transaction_records.png)
+"Swagger" (screenshots/swagger%20page.png)
 
 ---
 
-### CSV Upload
+🎥 Project Demonstration
 
-Upload transaction data using CSV files.
+Demo Video
 
-![CSV Upload](screenshots/Csv%20file%20upload_Edited.png)
-
----
-
-### Swagger API Documentation
-
-Interactive REST API testing using Swagger UI.
-
-![Swagger](screenshots/swagger%20page.png)
+"▶ Watch Full Project Demo" (https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view?usp=drivesdk)
 
 ---
 
-## API Documentation
+📑 API Documentation
 
-Swagger UI
+Swagger UI:
 
-```text
 http://localhost:9091/swagger-ui/index.html
-```
 
 ---
 
-## Authentication APIs
+🔐 Authentication APIs
 
-### Register User
+Register User
 
-```http
 POST /auth/register
-```
 
-### Login User
+Login User
 
-```http
 POST /auth/login
-```
 
 ---
 
-## Transaction APIs
+💳 Transaction APIs
 
-### Upload CSV
+Upload Transactions
 
-```http
 POST /transactions/upload
-```
 
-### Get Transactions
+Get Transactions
 
-```http
 GET /transactions
-```
 
-### Search Transactions
+Search Transactions
 
-```http
 GET /transactions/search
-```
 
-### Reconciliation Summary
+Reconciliation Summary
 
-```http
 GET /transactions/reconciliation-summary
-```
 
 ---
 
-## Getting Started
+🔒 Security Features
 
-### Backend Setup
+- JWT Token Authentication
+- Role-Based Access Control (RBAC)
+- Secure API Endpoints
+- Password Encryption
+- Authentication Filters
+- Global Exception Handling
 
-```bash
+---
+
+⚙ Backend Setup
+
 cd backend
-```
-
-```bash
 mvn clean install
-```
-
-```bash
 mvn spring-boot:run
-```
 
-Backend runs on:
+Backend URL
 
-```text
 http://localhost:9091
-```
 
 ---
 
-### Frontend Setup
+🎨 Frontend Setup
 
-```bash
 cd frontend
-```
-
-```bash
 npm install
-```
-
-```bash
 npm start
-```
 
-Frontend runs on:
+Frontend URL
 
-```text
 http://localhost:3000
-```
 
 ---
 
-## Future Enhancements
+🚀 Future Enhancements
 
 - Export Reports to Excel
 - Email Notifications
-- Advanced Analytics Dashboard
-- Cloud Deployment
 - Audit Logging
-- Multi-user Support
+- Cloud Deployment
+- Advanced Analytics Dashboard
+- Multi-Tenant Support
+- Microservices Architecture
 
 ---
 
-## Author
+👨‍💻 Author
 
-### Naveen Amalakanti
+Naveen Amalakanti
 
-LinkedIn:
-
-https://www.linkedin.com/in/naveen-amalakanti
-
-Email:
+📧 Email
 
 naveenamalakanti07@gmail.com
 
+🔗 LinkedIn
+
+https://www.linkedin.com/in/naveen-amalakanti
+
+💻 GitHub
+
+https://github.com/naveen98495
+
 ---
 
-## License
+📄 License
 
-This project is developed for educational, learning, and portfolio purposes.
+This project is developed for educational, portfolio, and demonstration purposes.
