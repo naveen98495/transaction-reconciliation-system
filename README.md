@@ -10,17 +10,30 @@ The system enables organizations to efficiently manage financial transactions, i
 
 Frontend:
 
-https://transaction-reconciliation-system -19lximfkc.vercel.app
+https://transaction-reconciliation-system-19lximfkc.vercel.app
 
 Backend API:
 
-https://YOUR-BACKEND-URL
+Deployment in Progress
 
-Swagger:
+Swagger Documentation:
 
-https://YOUR-BACKEND-URL/swagger-ui/index.html
+Available Locally
+http://localhost:9091/swagger-ui/index.html
+
 ---
 
+## ⭐ Key Achievements
+
+- Built a full-stack transaction reconciliation platform from scratch
+- Implemented JWT Authentication and Authorization
+- Developed CSV upload and transaction processing workflow
+- Created reconciliation analytics dashboard
+- Designed REST APIs using Spring Boot
+- Integrated MySQL database using JPA/Hibernate
+- Developed responsive React frontend
+
+---
 ## 📌 Project Highlights
 
 ✔ Secure JWT Authentication & Authorization
@@ -37,7 +50,7 @@ https://YOUR-BACKEND-URL/swagger-ui/index.html
 
 ✔ Swagger API Documentation
 
-✔ PostgreSQL Database Integration
+✔ MYSQL Database Integration
 
 ✔ Responsive React Frontend
 
@@ -59,7 +72,7 @@ React Frontend
 Spring Boot REST APIs
        │
        ▼
-PostgreSQL Database
+MYSQL Database
 
 ---
 
@@ -181,11 +194,11 @@ transaction-reconciliation-system
 
 ## 🎥 Project Demonstration
 
-Demo Video
+▶ Watch Full Project Demo
 
-"▶ Watch Full Project Demo" (https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view?usp=drivesdk)
+https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view
 
----
+---- 
 
 ## 📑 API Documentation
 
@@ -294,4 +307,4 @@ https://github.com/naveen98495
 
 ## 📄 License
 
-This project is developed for educational, portfolio, and demonstration purposes.
+This project was developed as a full-stack portfolio project for learning, demonstration, and recruitment purposes.
