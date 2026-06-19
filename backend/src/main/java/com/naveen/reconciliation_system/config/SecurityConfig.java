@@ -26,7 +26,7 @@ public class SecurityConfig {
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/csv/**",
-                                "/api/v1/**" // 👈 Added this so your endpoints are publicly open for recruiters!
+                                "/transactions/**" // 👈 Added this so your endpoints are publicly open for recruiters!
                         ).permitAll()
                         .anyRequest()
                         .authenticated()
