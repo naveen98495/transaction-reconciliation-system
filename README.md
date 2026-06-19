@@ -141,35 +141,30 @@ DevOps
 
 ### 📂 Project Structure
 
-transaction-reconciliation-system
-│
-├── backend
-│   ├── src
-│   │   ├── main
-│   │   │   ├── java
-│   │   │   │   ├── config
-│   │   │   │   ├── controller
-│   │   │   │   ├── dto
-│   │   │   │   ├── entity
-│   │   │   │   ├── exception
-│   │   │   │   ├── repository
-│   │   │   │   ├── service
-│   │   │   │   └── ReconciliationSystemApplication.java
-│   │   │   └── resources
-│   │   │       └── application.yml
-│   │   └── test
-│   ├── Dockerfile
-│   └── pom.xml
-│
-├── frontend
-│   ├── public
-│   └── src
-│
-├── screenshots
-│
+```text
+transaction-reconciliation-system/
+├── backend/
+│   ├── src/main/java/
+│   │   ├── config/
+│   │   ├── controller/
+│   │   ├── dto/
+│   │   ├── entity/
+│   │   ├── exception/
+│   │   ├── repository/
+│   │   ├── service/
+│   │   └── ReconciliationSystemApplication.java
+│   └── src/main/resources/
+│       └── application.yml
+├── frontend/
+│   ├── public/
+│   └── src/
+├── screenshots/
 ├── docker-compose.yml
+├── Dockerfile
+├── pom.xml
 ├── README.md
 └── .env.example
+```
 
 ---
 
@@ -286,25 +281,15 @@ Spring Data JPA and Hibernate handle ORM and database operations.
 
 ## 📸 Application Screenshots
 
-Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-screenshots/dashboard.png
+![CSV Upload](screenshots/Csv%20file%20upload_Edited.png)
 
-CSV Upload
+![Transaction Records](screenshots/transaction%20records.png)
 
-screenshots/Csv file upload_Edited.png
+![Transaction Search](screenshots/Search%20transactions.png)
 
-Transaction Records
-
-screenshots/transaction records.png
-
-Transaction Search
-
-screenshots/Search transactions.png
-
-Swagger Documentation
-
-screenshots/swagger page.png
+![Swagger Documentation](screenshots/swagger%20page.png)
 
 ---
 
