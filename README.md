@@ -1,289 +1,384 @@
-## 🚀 Transaction Reconciliation Platform
+# 🚀 Transaction Reconciliation System
 
-A full-stack transaction reconciliation platform designed to automate transaction validation, reconciliation, monitoring, and reporting between uploaded transaction records.
+«A full-stack transaction reconciliation platform built with Spring Boot 3, React, PostgreSQL, JWT Authentication, Docker, and Swagger/OpenAPI to automate financial transaction processing, validation, and reconciliation.»
 
-The system enables organizations to efficiently manage financial transactions, identify mismatches, analyze reconciliation results, and monitor transaction health through an interactive dashboard.
-
----
-
-## Live Demo
-
-Frontend:
-
-https://transaction-reconciliation-system-19lximfkc.vercel.app
-
-Backend API:
-
-Deployment in Progress
-
-Swagger Documentation:
-
-Available Locally
-http://localhost:9091/swagger-ui/index.html
+"Java" (https://img.shields.io/badge/Java-17-orange)
+"Spring Boot" (https://img.shields.io/badge/Spring%20Boot-3.3.5-brightgreen)
+"PostgreSQL" (https://img.shields.io/badge/PostgreSQL-Neon-blue)
+"React" (https://img.shields.io/badge/React-Frontend-61DAFB)
+"JWT" (https://img.shields.io/badge/JWT-Authentication-red)
+"Docker" (https://img.shields.io/badge/Docker-Containerization-2496ED)
+"Swagger" (https://img.shields.io/badge/Swagger-OpenAPI-green)
+"License" (https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
-## ⭐ Key Achievements
+## 📖 Overview
 
-- Built a full-stack transaction reconciliation platform from scratch
-- Implemented JWT Authentication and Authorization
-- Developed CSV upload and transaction processing workflow
-- Created reconciliation analytics dashboard
-- Designed REST APIs using Spring Boot
-- Integrated MySQL database using JPA/Hibernate
-- Developed responsive React frontend
+Transaction reconciliation is a critical process in banking, fintech, payment gateways, and enterprise financial systems. Organizations receive transaction records from multiple sources, making manual verification slow, repetitive, and prone to human error.
 
----
-## 📌 Project Highlights
+This project automates that workflow by providing secure REST APIs to upload transaction data, store it in PostgreSQL, retrieve records, and expose documented APIs through Swagger. The application also includes JWT-based authentication and a responsive React frontend for interacting with the backend.
 
-✔ Secure JWT Authentication & Authorization
-
-✔ CSV Transaction Upload & Processing
-
-✔ Automated Transaction Reconciliation
-
-✔ Advanced Transaction Search
-
-✔ Reconciliation Analytics Dashboard
-
-✔ RESTful API Architecture
-
-✔ Swagger API Documentation
-
-✔ MYSQL Database Integration
-
-✔ Responsive React Frontend
+The project demonstrates modern backend development practices using Spring Boot, REST APIs, database integration, authentication, Docker, and API documentation.
 
 ---
 
 ## 🎯 Business Problem
 
-Organizations often receive transaction records from multiple sources. Manually validating and reconciling these records is time-consuming and prone to errors.
+Financial organizations process thousands of transactions every day. Verifying these transactions manually is inefficient and can lead to inconsistencies, duplicate entries, and reconciliation delays.
 
-This platform automates the reconciliation process by validating uploaded transaction data, identifying mismatches, generating reconciliation summaries, and providing real-time visibility through an interactive dashboard.
+This system helps automate transaction processing by:
 
----
-
-## 🏗 System Architecture
-
-React Frontend
-       │
-       ▼
-Spring Boot REST APIs
-       │
-       ▼
-MYSQL Database
+- Uploading transaction records through CSV files
+- Storing transaction data in PostgreSQL
+- Providing secure APIs for transaction management
+- Protecting endpoints using JWT Authentication
+- Documenting APIs using Swagger/OpenAPI
+- Providing a React-based user interface for easy interaction
 
 ---
 
-## ✨ Features
+### ⭐ Key Features
 
-Authentication Module
+Authentication & Security
 
-- User Registration
-- User Login
-- JWT Token Generation
-- Protected APIs
-- Role-Based Access Control
+- Secure User Registration
+- Secure User Login
+- JWT Authentication
+- Password Encryption
+- Protected REST APIs
+- Spring Security Integration
 
 Transaction Management
 
-- Upload Transactions via CSV
-- View Transaction Records
-- Search Transactions
-- Update Transactions
-- Delete Transactions
+- Upload Transactions using CSV
+- Store Transactions in PostgreSQL
+- View Uploaded Transactions
+- Retrieve Transaction Records
+- RESTful CRUD APIs
 
-Reconciliation Engine
+API Documentation
 
-- Automatic Transaction Matching
-- Reconciliation Summary Generation
-- Transaction Validation
-- Exception Identification
-
-Dashboard & Analytics
-
-- Reconciliation Overview
-- Transaction Statistics
-- Monitoring Dashboard
-- Search & Filtering
-
----
-
-## 🛠 Technology Stack
-
-Backend
-
-- Java 17
-- Spring Boot
-- Spring Security
-- JWT Authentication
-- PostgreSQL
-- Maven
-- Swagger OpenAPI
+- Swagger/OpenAPI Integration
+- Interactive API Testing
+- API Documentation Interface
 
 Frontend
 
-- React JS
-- JavaScript
-- HTML5
-- CSS3
+- Responsive React Application
+- CSV Upload Interface
+- Transaction Listing
+- REST API Integration
 
-Development Tools
+DevOps
 
-- IntelliJ IDEA
-- VS Code
-- Postman
-- Git
-- GitHub
+- Docker Support
+- Docker Compose Configuration
+- Environment Variable Configuration
+- Maven Build System
 
 ---
 
-## 📂 Repository Structure
+## 🏗️ System Architecture
 
-```text
+                React Frontend
+                      │
+                      ▼
+          Spring Boot REST APIs
+                      │
+      Spring Security + JWT Authentication
+                      │
+                      ▼
+          PostgreSQL (Neon Database)
+
+---
+
+## 🌟 Project Highlights
+
+- Built using Spring Boot 3 and Java 17
+- Secure JWT-based authentication
+- PostgreSQL database integration
+- CSV transaction upload functionality
+- RESTful API architecture
+- Interactive Swagger documentation
+- Dockerized application setup
+- Responsive React frontend
+- Clean layered architecture (Controller → Service → Repository → Database)
+
+---
+## 🛠️ Technology Stack
+
+### Backend
+
+- Java 17
+- Spring Boot 3.3.5
+- Spring Security
+- Spring Data JPA
+- JWT Authentication
+- PostgreSQL (Neon Database)
+- Maven
+- Swagger / OpenAPI
+
+### Frontend
+
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Axios
+
+## DevOps & Tools
+
+- Docker
+- Docker Compose
+- Git
+- GitHub
+- Postman
+- VS Code
+- IntelliJ IDEA
+
+---
+
+### 📂 Project Structure
+
 transaction-reconciliation-system
 │
 ├── backend
-│   ├── controller
-│   ├── service
-│   ├── repository
-│   ├── entity
-│   ├── dto
-│   ├── config
-│   └── security
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   ├── config
+│   │   │   │   ├── controller
+│   │   │   │   ├── dto
+│   │   │   │   ├── entity
+│   │   │   │   ├── exception
+│   │   │   │   ├── repository
+│   │   │   │   ├── service
+│   │   │   │   └── ReconciliationSystemApplication.java
+│   │   │   └── resources
+│   │   │       └── application.yml
+│   │   └── test
+│   ├── Dockerfile
+│   └── pom.xml
 │
 ├── frontend
-│   ├── src
 │   ├── public
-│   └── components
+│   └── src
 │
 ├── screenshots
 │
 ├── docker-compose.yml
-├── Dockerfile
-├── pom.xml
-└── README.md
-```
+├── README.md
+└── .env.example
 
 ---
 
-## 📸 Application Screenshots
+## ⚙️ Backend Setup
 
-### Dashboard
+Clone the repository
 
-![Dashboard](screenshots/dashboard.png)
+git clone https://github.com/naveen98495/transaction-reconciliation-system.git
 
-### Transaction Search
+Move into the project
 
-![Transaction Search](screenshots/Search%20transactions.png)
+cd transaction-reconciliation-system/backend
 
-### Transaction Records
+Install dependencies
 
-![Transaction Records](screenshots/transaction%20records.png)
-
-### CSV Upload
-
-![CSV Upload](screenshots/Csv%20file%20upload_Edited.png)
-
-### Swagger Documentation
-
-![Swagger Documentation](screenshots/swagger%20page.png)
-
----
-
-## 🎥 Project Demonstration
-
-▶ Watch Full Project Demo
-
-https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view
-
----- 
-
-## 📑 API Documentation
-
-Swagger UI:
-
-http://localhost:9091/swagger-ui/index.html
-
----
-
-## 🔐 Authentication APIs
-
-Register User
-
-POST /auth/register
-
-Login User
-
-POST /auth/login
-
----
-
-## 💳 Transaction APIs
-
-Upload Transactions
-
-POST /transactions/upload
-
-Get Transactions
-
-GET /transactions
-
-Search Transactions
-
-GET /transactions/search
-
-Reconciliation Summary
-
-GET /transactions/reconciliation-summary
-
----
-
-## 🔒 Security Features
-
-- JWT Token Authentication
-- Role-Based Access Control (RBAC)
-- Secure API Endpoints
-- Password Encryption
-- Authentication Filters
-- Global Exception Handling
-
----
-
-## ⚙ Backend Setup
-
-cd backend
 mvn clean install
+
+Run the application
+
 mvn spring-boot:run
 
-Backend URL
+Backend runs at:
 
-http://localhost:9091
+http://localhost:8080
 
 ---
 
 ## 🎨 Frontend Setup
 
+Open a new terminal
+
 cd frontend
+
+Install dependencies
+
 npm install
+
+Start React
+
 npm start
 
-Frontend URL
+Frontend runs at
 
 http://localhost:3000
 
 ---
 
+## 🐳 Docker Setup
+
+Build and start all services
+
+docker compose up --build
+
+Stop containers
+
+docker compose down
+
+---
+
+### 🌐 API Documentation
+
+Swagger UI
+
+http://localhost:8080/swagger-ui/index.html
+
+Open the above URL after starting the backend to explore and test all available REST APIs interactively.
+
+---
+## 📑 REST API Endpoints
+
+### Authentication APIs
+
+Method| Endpoint| Description
+POST| "/auth/register"| Register a new user
+POST| "/auth/login"| Authenticate user and generate JWT token
+
+---
+
+### Transaction APIs
+
+Method| Endpoint| Description
+POST| "/csv/upload"| Upload transaction records using CSV
+GET| "/csv/all"| Retrieve all uploaded transactions
+POST| "/transactions"| Create a transaction
+GET| "/transactions/paged"| Retrieve paginated transaction records
+
+---
+
+## 🔒 Security Features
+
+- JWT Authentication
+- Spring Security
+- Password Encryption
+- Protected REST APIs
+- Authentication Filter
+- Global Exception Handling
+- Secure Endpoint Configuration
+
+---
+
+## 🗄️ Database
+
+The application uses PostgreSQL (Neon Cloud Database) for persistent transaction storage.
+
+Key entities include:
+
+- User
+- TransactionRecord
+- BankTransaction
+
+Spring Data JPA and Hibernate handle ORM and database operations.
+
+---
+
+## 📸 Application Screenshots
+
+Dashboard
+
+screenshots/dashboard.png
+
+CSV Upload
+
+screenshots/Csv file upload_Edited.png
+
+Transaction Records
+
+screenshots/transaction records.png
+
+Transaction Search
+
+screenshots/Search transactions.png
+
+Swagger Documentation
+
+screenshots/swagger page.png
+
+---
+
+### 🎥 Project Demonstration
+
+Google Drive Demo
+
+https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view
+
+---
+
+### 💼 Project Use Cases
+
+This project demonstrates practical backend development concepts including:
+
+- Secure Authentication using JWT
+- REST API Development
+- Database Integration
+- CSV File Processing
+- API Documentation with Swagger
+- Dockerized Deployment
+- Full-stack Integration with React
+
+It is suitable as a portfolio project for backend and full-stack software engineering roles.
+
+---
 ## 🚀 Future Enhancements
 
-- Export Reports to Excel
+The following features are planned for future releases:
+
+- Bank Transaction Upload Module
+- Automated Transaction Reconciliation Engine
+- Matched / Unmatched Transaction Reports
+- Reconciliation Dashboard & Analytics
+- Export Reports (Excel / PDF)
 - Email Notifications
 - Audit Logging
-- Cloud Deployment
-- Advanced Analytics Dashboard
-- Multi-Tenant Support
+- Role-Based Access Control (RBAC)
+- Cloud Deployment (AWS / Azure)
+- CI/CD Pipeline using GitHub Actions
 - Microservices Architecture
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+If you'd like to improve this project:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push your branch.
+5. Open a Pull Request.
+
+---
+
+## 📌 Learning Outcomes
+
+This project helped strengthen practical knowledge of:
+
+- Java 17
+- Spring Boot 3
+- Spring Security
+- JWT Authentication
+- Spring Data JPA
+- PostgreSQL
+- REST API Development
+- Swagger/OpenAPI
+- Docker
+- React Integration
+- Git & GitHub
+- Layered Backend Architecture
 
 ---
 
@@ -291,11 +386,14 @@ http://localhost:3000
 
 Naveen Amalakanti
 
+B.Tech – Information Technology
+MVGR College of Engineering
+
 ## 📧 Email
 
 naveenamalakanti07@gmail.com
 
-## 🔗 LinkedIn
+## 💼 LinkedIn
 
 https://www.linkedin.com/in/naveen-amalakanti
 
@@ -305,6 +403,55 @@ https://github.com/naveen98495
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project was developed as a full-stack portfolio project for learning, demonstration, and recruitment purposes.
+This project is licensed under the MIT License.
+
+You are free to use, modify, and distribute this project for educational and learning purposes.
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+- ⭐ Star this repository
+- 🍴 Fork the repository
+- 🐞 Report issues
+- 💡 Suggest improvements
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to the open-source community and the Spring Boot, PostgreSQL, React, Docker, and Swagger ecosystems for providing the tools and libraries used in this project.
+
+---
+
+## 📈 Project Status
+
+Current Status: Active Development
+
+## Completed
+
+- ✅ Spring Boot Backend
+- ✅ PostgreSQL Integration
+- ✅ JWT Authentication
+- ✅ Spring Security Configuration
+- ✅ Swagger/OpenAPI Documentation
+- ✅ CSV Upload API
+- ✅ CSV Transaction Storage
+- ✅ Docker Support
+- ✅ React Frontend Integration
+
+## Planned
+
+- 🔄 Bank Transaction Upload
+- 🔄 Reconciliation Engine
+- 🔄 Dashboard Analytics
+- 🔄 Matched / Unmatched Reports
+- 🔄 Production Deployment
+
+---
+
+«If this project helped you or you found it interesting, please consider giving it a ⭐ on GitHub.»
