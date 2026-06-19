@@ -172,43 +172,51 @@ transaction-reconciliation-system/
 
 Clone the repository
 
+```bash
 git clone https://github.com/naveen98495/transaction-reconciliation-system.git
+```
 
 Move into the project
 
-cd transaction-reconciliation-system/backend
+```bash
+cd transaction-reconciliation-system
+```
 
 Install dependencies
 
+```bash
 mvn clean install
+```
 
 Run the application
 
+```bash
 mvn spring-boot:run
+```
 
-Backend runs at:
+Backend runs locally:
 
+```text
 http://localhost:8080
+```
+
+Live Backend (Render):
+
+```text
+https://reconciliation-backend-4ddg.onrender.com
+```
 
 ---
 
 ## 🎨 Frontend Setup
 
-Open a new terminal
-
-cd frontend
-
-Install dependencies
-
-npm install
-
-Start React
-
-npm start
-
-Frontend runs at
+Local Development
 
 http://localhost:3000
+
+Deployment Status
+
+🚧 Frontend deployment is currently in progress and will be available in a future release.
 
 ---
 
@@ -223,16 +231,48 @@ Stop containers
 docker compose down
 
 ---
+🌐 API Documentation
 
-### 🌐 API Documentation
+Swagger is available for local development and API testing.
 
-Swagger UI
+Local Swagger UI
 
 http://localhost:8080/swagger-ui/index.html
 
-Open the above URL after starting the backend to explore and test all available REST APIs interactively.
+Live Backend
+
+https://reconciliation-backend-4ddg.onrender.com
+
+The backend is deployed on Render and connected to a Neon PostgreSQL database.
 
 ---
+
+## 🚀 Backend Deployment
+
+The backend application is successfully deployed on Render and connected to a Neon PostgreSQL cloud database. All REST APIs are served from the deployed environment.
+
+Live Backend URL
+
+https://reconciliation-backend-4ddg.onrender.com
+
+Sample API Endpoint
+
+GET
+"https://reconciliation-backend-4ddg.onrender.com/transactions"
+
+Deployment Tech Stack
+
+- Backend: Spring Boot 3
+- Hosting Platform: Render
+- Database: Neon PostgreSQL
+- API Format: REST (JSON)
+
+Live Backend Response
+
+"Backend API Response" (screenshots/backend-api-response.png)
+
+---
+
 ## 📑 REST API Endpoints
 
 ### Authentication APIs
@@ -293,9 +333,11 @@ Spring Data JPA and Hibernate handle ORM and database operations.
 
 ---
 
-### 🎥 Project Demonstration
+## 🎥 Project Demonstration
 
-Google Drive Demo
+A short demonstration of the application's features, including authentication, CSV upload, transaction management, and API testing.
+
+Demo Video
 
 https://drive.google.com/file/d/1IFQcNwG1xnjCal4EXbDajM6WUZ8TruD0/view
 
@@ -316,21 +358,15 @@ This project demonstrates practical backend development concepts including:
 It is suitable as a portfolio project for backend and full-stack software engineering roles.
 
 ---
+
 ## 🚀 Future Enhancements
 
-The following features are planned for future releases:
-
-- Bank Transaction Upload Module
 - Automated Transaction Reconciliation Engine
-- Matched / Unmatched Transaction Reports
-- Reconciliation Dashboard & Analytics
-- Export Reports (Excel / PDF)
-- Email Notifications
-- Audit Logging
+- Bank Transaction Upload Module
+- Dashboard & Analytics
+- Export Reports (Excel/PDF)
 - Role-Based Access Control (RBAC)
-- Cloud Deployment (AWS / Azure)
-- CI/CD Pipeline using GitHub Actions
-- Microservices Architecture
+- CI/CD Pipeline with GitHub Actions
 
 ---
 
@@ -370,21 +406,14 @@ This project helped strengthen practical knowledge of:
 ## 👨‍💻 Author
 
 Naveen Amalakanti
-
-B.Tech – Information Technology
+B.Tech in Information Technology
 MVGR College of Engineering
 
-## 📧 Email
+📧 Email: naveenamalakanti07@gmail.com
 
-naveenamalakanti07@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/naveen-amalakanti
 
-## 💼 LinkedIn
-
-https://www.linkedin.com/in/naveen-amalakanti
-
-## 💻 GitHub
-
-https://github.com/naveen98495
+💻 GitHub: https://github.com/naveen98495
 
 ---
 
@@ -415,7 +444,7 @@ Special thanks to the open-source community and the Spring Boot, PostgreSQL, Rea
 
 ## 📈 Project Status
 
-Current Status: Active Development
+Current Status: Backend Deployed | Frontend Deployment In Progress
 
 ## Completed
 
@@ -427,9 +456,11 @@ Current Status: Active Development
 - ✅ CSV Upload API
 - ✅ CSV Transaction Storage
 - ✅ Docker Support
-- ✅ React Frontend Integration
+- ✅ Backend Deployment on Render
+- ✅ Neon PostgreSQL Cloud Database
+- ✅ React Frontend (Development)
 
-## Planned
+## Planned Enhancements
 
 - 🔄 Bank Transaction Upload
 - 🔄 Reconciliation Engine
