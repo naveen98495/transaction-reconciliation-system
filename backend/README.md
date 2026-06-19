@@ -3,7 +3,7 @@
 ## Tech Stack
 - Java
 - Spring Boot
-- MySQL
+- PostgreSQL (Neon)
 - Docker
 - Postman
 

@@ -28,11 +28,10 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/auth/**",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/csv/**"
                         ).permitAll()
 
-                        .requestMatchers("/transactions/**")
-                        .hasRole("ADMIN")
 
                         .anyRequest()
                         .authenticated()

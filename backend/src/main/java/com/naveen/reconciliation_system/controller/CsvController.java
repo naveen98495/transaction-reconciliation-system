@@ -8,6 +8,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,38 +19,35 @@ import java.util.List;
 @RestController
 @RequestMapping("/csv")
 @CrossOrigin(origins = "*")
-
 public class CsvController {
 
     @Autowired
     private TransactionRepository transactionRepository;
 
-    @PostMapping("/upload")
+    @PostMapping(
+            value = "/upload",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+    )
     public String uploadCsv(@RequestParam("file") MultipartFile file) {
 
         try {
 
-            Reader reader =
-                    new InputStreamReader(file.getInputStream());
+            Reader reader = new InputStreamReader(file.getInputStream());
 
-            CSVParser csvParser =
-                    new CSVParser(
-                            reader,
-                            CSVFormat.DEFAULT
-                                    .withFirstRecordAsHeader()
-                                    .withIgnoreHeaderCase()
-                                    .withTrim()
-                    );
+            CSVParser csvParser = new CSVParser(
+                    reader,
+                    CSVFormat.DEFAULT
+                            .withFirstRecordAsHeader()
+                            .withIgnoreHeaderCase()
+                            .withTrim()
+            );
 
             for (CSVRecord csvRecord : csvParser) {
 
-                TransactionRecord transaction =
-                        new TransactionRecord();
+                TransactionRecord transaction = new TransactionRecord();
 
                 transaction.setAmount(
-                        Double.parseDouble(
-                                csvRecord.get("amount")
-                        )
+                        Double.parseDouble(csvRecord.get("amount"))
                 );
 
                 transaction.setStatus(
@@ -62,6 +60,9 @@ public class CsvController {
 
                 transactionRepository.save(transaction);
             }
+
+            csvParser.close();
+            reader.close();
 
             return "CSV Uploaded Successfully";
 
